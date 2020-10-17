@@ -1,0 +1,135 @@
+{
+  "dataFrom": "",
+  "emptyFlag": false,
+  "errorCode": "0",
+  "errorMessage": "处理成功",
+  "success": true,
+  "value": {
+    "list": [
+      {
+        "drawFlowFund": "6214947.3",
+        "drawFlowFundRj": "",
+        "estimateDrawTime": "",
+        "isGetKjpdf": 1,
+        "isGetXlpdf": 2,
+        "lotteryDrawNum": "20101",
+        "lotteryDrawResult": "03 04 05 09 34 07 09",
+        "lotteryDrawStatus": 20,
+        "lotteryDrawTime": "2020-10-14",
+        "lotteryEquipmentCount": 3,
+        "lotteryGameName": "超级大乐透",
+        "lotteryGameNum": "85",
+        "lotteryGamePronum": 0,
+        "lotteryPromotionFlag": 0,
+        "lotterySaleBeginTime": "2020-10-12 20:10:00",
+        "lotterySaleEndtime": "2020-10-14 20:00:00",
+        "lotterySuspendedFlag": 0,
+        "lotteryUnsortDrawresult": "03+09+34+04+05 09+07",
+        "matchList": [],
+        "pdfType": 1,
+        "poolBalanceAfterdraw": "942,455,528.10",
+        "poolBalanceAfterdrawRj": "",
+        "prizeLevelList": [
+          {
+            "awardType": 0,
+            "prizeLevel": "一等奖",
+            "sort": 10,
+            "stakeAmount": "10,000,000",
+            "stakeCount": "5",
+            "totalPrizeamount": "50,000,000"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "一等奖(追加)",
+            "sort": 20,
+            "stakeAmount": "0",
+            "stakeCount": "0",
+            "totalPrizeamount": "0"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "二等奖",
+            "sort": 30,
+            "stakeAmount": "118,501",
+            "stakeCount": "109",
+            "totalPrizeamount": "12,916,609"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "二等奖(追加)",
+            "sort": 40,
+            "stakeAmount": "94,800",
+            "stakeCount": "31",
+            "totalPrizeamount": "2,938,800"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "三等奖",
+            "sort": 50,
+            "stakeAmount": "10,000",
+            "stakeCount": "164",
+            "totalPrizeamount": "1,640,000"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "四等奖",
+            "sort": 60,
+            "stakeAmount": "3,000",
+            "stakeCount": "746",
+            "totalPrizeamount": "2,238,000"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "五等奖",
+            "sort": 70,
+            "stakeAmount": "300",
+            "stakeCount": "15,575",
+            "totalPrizeamount": "4,672,500"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "六等奖",
+            "sort": 80,
+            "stakeAmount": "200",
+            "stakeCount": "21,297",
+            "totalPrizeamount": "4,259,400"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "七等奖",
+            "sort": 90,
+            "stakeAmount": "100",
+            "stakeCount": "34,331",
+            "totalPrizeamount": "3,433,100"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "八等奖",
+            "sort": 100,
+            "stakeAmount": "15",
+            "stakeCount": "671,376",
+            "totalPrizeamount": "10,070,640"
+          },
+          {
+            "awardType": 0,
+            "prizeLevel": "九等奖",
+            "sort": 110,
+            "stakeAmount": "5",
+            "stakeCount": "6,811,718",
+            "totalPrizeamount": "34,058,590"
+          }
+        ],
+        "prizeLevelListRj": [],
+        "ruleType": 0,
+        "termList": [],
+        "totalSaleAmount": "270,291,174",
+        "totalSaleAmountRj": "",
+        "verify": 1
+      }
+    ],
+    "pageNo": 1,
+    "pageSize": 1,
+    "pages": 2033,
+    "total": 2033
+  }
+}

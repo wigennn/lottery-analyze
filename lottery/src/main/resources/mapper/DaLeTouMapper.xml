@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.redbyte.platform.lottery.core.dao.DaLeTouMapper" >
+  <insert id="insert" parameterType="com.redbyte.platform.lottery.core.domain.entity.DaLeTou" >
+    insert into daletou (id, num, result, 
+      unsort_result, lottery_date, sale_begin_time, 
+      sale_end_time, pool_balance, total_sale_amount, 
+      create_time, update_time)
+    values (#{id,jdbcType=BIGINT}, #{num,jdbcType=VARCHAR}, #{result,jdbcType=VARCHAR}, 
+      #{unsortResult,jdbcType=VARCHAR}, #{lotteryDate,jdbcType=DATE}, #{saleBeginTime,jdbcType=TIMESTAMP}, 
+      #{saleEndTime,jdbcType=TIMESTAMP}, #{poolBalance,jdbcType=VARCHAR}, #{totalSaleAmount,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.redbyte.platform.lottery.core.domain.entity.DaLeTou" >
+    insert into daletou
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="num != null" >
+        num,
+      </if>
+      <if test="result != null" >
+        result,
+      </if>
+      <if test="unsortResult != null" >
+        unsort_result,
+      </if>
+      <if test="lotteryDate != null" >
+        lottery_date,
+      </if>
+      <if test="saleBeginTime != null" >
+        sale_begin_time,
+      </if>
+      <if test="saleEndTime != null" >
+        sale_end_time,
+      </if>
+      <if test="poolBalance != null" >
+        pool_balance,
+      </if>
+      <if test="totalSaleAmount != null" >
+        total_sale_amount,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="num != null" >
+        #{num,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null" >
+        #{result,jdbcType=VARCHAR},
+      </if>
+      <if test="unsortResult != null" >
+        #{unsortResult,jdbcType=VARCHAR},
+      </if>
+      <if test="lotteryDate != null" >
+        #{lotteryDate,jdbcType=DATE},
+      </if>
+      <if test="saleBeginTime != null" >
+        #{saleBeginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="saleEndTime != null" >
+        #{saleEndTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="poolBalance != null" >
+        #{poolBalance,jdbcType=VARCHAR},
+      </if>
+      <if test="totalSaleAmount != null" >
+        #{totalSaleAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>
