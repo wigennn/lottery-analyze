@@ -1,6 +1,7 @@
 package com.redbyte.platform.lottery;
 
 import com.alibaba.fastjson.JSON;
+import com.redbyte.platform.lottery.core.biz.DaletouAnalyze;
 import com.redbyte.platform.lottery.core.dao.DaLeTouMapper;
 import com.redbyte.platform.lottery.core.domain.dto.DaleTouDTO;
 import com.redbyte.platform.lottery.core.domain.entity.DaLeTou;
@@ -14,9 +15,8 @@ import org.springframework.format.datetime.DateFormatter;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @SpringBootTest
 class LotteryApplicationTests {
@@ -49,5 +49,36 @@ class LotteryApplicationTests {
             String result = HttpClient.get(String.format(init_url_str, i, pageSize));
             daletouJob.analyze(result);
         }
+    }
+
+    @Autowired
+    DaletouAnalyze daletouAnalyze;
+
+    @Test
+    public void test() {
+        Map<String, Integer> map = new HashMap<>();
+        List<String> list = daletouAnalyze.endAnalyze();
+        list.stream().forEach(x -> {
+            List<DaLeTou> daLeTous = daLeTouMapper.select("%" + x);
+            map.put(x, daLeTous.size());
+        });
+        map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue)).forEach(System.out::println);
+//        System.out.println(map);
+
+    }
+
+
+    @Test
+    public void testFront() {
+        List<String> l = daletouAnalyze.frontAllResults();
+        Map<String, Integer> map = new HashMap<>();
+        l.stream().forEach(x -> {
+            List<DaLeTou> leTouList = daLeTouMapper.select(x + "%");
+            map.put(x, leTouList.size());
+        });
+
+        map.entrySet().stream().filter(x->x.getValue() != 0)
+                .sorted(Comparator.comparing(Map.Entry::getValue))
+                .forEach(System.out::println);
     }
 }

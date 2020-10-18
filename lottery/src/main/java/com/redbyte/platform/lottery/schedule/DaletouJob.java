@@ -48,9 +48,9 @@ public class DaletouJob {
      * 大乐透每周一、周三、周六开奖
      * 每周二、周四、周日更新开奖结果
      */
-    @Schedules(value = {@Scheduled(cron = "0 0 1 ? * 2"),
-            @Scheduled(cron = "0 0 1 ? * 4"),
-            @Scheduled(cron = "0 0 1 ? * 7")})
+    @Schedules(value = {@Scheduled(cron = "0 0 1 ? * 1"),
+            @Scheduled(cron = "0 51 1 ? * 3"),
+            @Scheduled(cron = "0 51 21 ? * 6")})
     public void updateCurDaletou() throws Exception {
         String json = HttpClient.get(url);
         this.analyze(json);
